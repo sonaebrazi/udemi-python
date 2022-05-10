@@ -11,13 +11,12 @@ class Calculator:
 
     def button_press(self, value):
         if value == 'AC':
-            div_trigger = False
-            mult_trigger = False
-            add_trigger = False
-            sub_trigger = False
+            self.div_trigger = False
+            self.mult_trigger = False
+            self.add_trigger = False
+            self.sub_trigger = False
             self.number_entry.delete(0, "end")
             entry_val = 0
-            self.number_entry.insert(0, entry_val)
         else:
             entry_val = self.number_entry.get()
             entry_val += value
